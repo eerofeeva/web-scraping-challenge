@@ -54,7 +54,7 @@ def scrape():
         soup = bs(html, 'html.parser')
         new_image_url = soup.find('div', class_='downloads').find_all('a')
         for url in new_image_url:
-            if url.text =='Original':
+            if url.text =='Sample':
                 image['image_url'] = url['href']
 
     mars_info["hem_images"] = hem_images 
